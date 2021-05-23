@@ -5,9 +5,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Tech used
 
 The app was made with:
-[x] React
-[x] Redux Toolkit
-[x] TailwindCSS
+- [x] React
+- [x] Redux Toolkit
+- [x] TailwindCSS
 
 ## What is the app all about?
 
