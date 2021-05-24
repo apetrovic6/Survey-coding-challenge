@@ -40,7 +40,7 @@ export const OtherAnswer = ({
             <input
               readOnly
               defaultValue="Drugi razlozi"
-              className="border-2 border-yellow rounded-lg px-2  hover:border-yellow-400 focus:border-yellow-500 focus:outline-none"
+              className="self-center border-2 border-yellow rounded-lg px-2  hover:border-yellow-400 focus:border-yellow-500 focus:outline-none"
             />
 
             <Button
@@ -51,11 +51,22 @@ export const OtherAnswer = ({
             />
           </>
         ) : (
-          <p>{question.otherAnswer[0].reason}</p>
+          <>
+            <p className="self-center hover:border px-2 rounded-lg  hover:border-yellow-400 focus:border-yellow-500 focus:outline-none">
+              {question.otherAnswer[0].reason}
+            </p>
+
+            <Button
+              icon="x"
+              styling="focus:outline-none mx-2"
+              iconStyle="gray-400"
+              onClick={onDeleteOtherAnswer.bind(this, question.id)}
+            />
+          </>
         )}
       </div>
 
-      {editable && (
+      {editable ? (
         <textarea
           rows="4"
           columns="9"
@@ -63,6 +74,8 @@ export const OtherAnswer = ({
           value={question.otherAnswer[0].answer}
           onChange={onOtherAnswerInputChange.bind(this, question.id)}
         />
+      ) : (
+        <p className="mx-14 px-1">{question.otherAnswer[0].answer}</p>
       )}
     </div>
   );

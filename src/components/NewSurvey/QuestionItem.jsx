@@ -29,7 +29,9 @@ export const QuestionItem = ({ question, editable }) => {
           type="text"
         />
       ) : (
-        <p className="self-center mx-1">{question.title}</p>
+        <p className="self-center mx-1 hover:border px-2 rounded-lg  hover:border-yellow-400 focus:border-yellow-500 focus:outline-none">
+          {question.title}
+        </p>
       )}
 
       {question.requiredAnswer && <p className="text-red-600">*</p>}

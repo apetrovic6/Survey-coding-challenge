@@ -890,7 +890,7 @@ module.exports = {
     ],
     borderRadius: ["responsive"],
     borderStyle: ["responsive"],
-    borderWidth: ["responsive"],
+    borderWidth: ["responsive", "hover", "focus"],
     boxDecorationBreak: ["responsive"],
     boxShadow: ["responsive", "group-hover", "focus-within", "hover", "focus"],
     boxSizing: ["responsive"],
@@ -1022,5 +1022,6 @@ module.exports = {
     wordBreak: ["responsive"],
     zIndex: ["responsive", "focus-within", "focus"],
   },
+
   plugins: [],
 };
