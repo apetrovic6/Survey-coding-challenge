@@ -1,13 +1,11 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import { changeInput } from "../../Redux/breadcrumbSlice";
+
 import { Input } from "../UI/Input";
 import { RiPencilFill } from "react-icons/ri";
-export const NewSurveyInput = (
-  {
-    //  value, onChange
-  }
-) => {
+export const NewSurveyInput = () => {
   const dispatch = useDispatch();
   const surveyName = useSelector((state) => state.breadcrumb);
   const onInputChange = (e) => {
